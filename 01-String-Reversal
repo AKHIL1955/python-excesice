@@ -1,0 +1,19 @@
+#question:1
+v='python'
+s='is'
+d='awersome'
+a=v[::-1]
+b=s[::-1]
+c=d[::-1]
+print(a +" "+ b+" " + c )
+
+    OR
+    
+#question:1 another methord
+v=input("enter the string")
+s=v.split()
+rev=[]
+for i in s:
+ rev.append( i[::-1])
+a=" ".join(rev)
+print(a)    
