@@ -1,0 +1,36 @@
+#question:7
+import random
+animal=['lion','cub','zebra','shark','elephant','rhino','fox','cat','cub','cheeta']
+word=random.choice(animal).lower()
+correct=[]
+incorrect=[]
+tries=6
+hangman_count=-1
+while tries >0:
+  output=''
+  for letter in word:
+    if letter in correct:
+      output+=letter
+    else:
+      output+= ' _ '
+  if output==word:
+    break
+  print('print the word',output)
+  print(tries,'chances left')
+  guess=input().lower()
+  if guess in correct or guess in incorrect:
+    print('already guessed',guess)
+  elif guess in word:
+    print('congragulation you are completed this word')
+  else:
+      print('sorry you are guessed incorrectely')
+      hangman_count=hangman_count+1
+      tries=tries-1
+      incorrect.append(guess)
+if tries>0:
+  print('you guess the word and you win')
+else:
+    print('sorry wrong word try again')
+
+
+
