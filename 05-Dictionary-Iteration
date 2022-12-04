@@ -1,0 +1,4 @@
+#question:5
+a = {'A': 65, 'B': 66, 'C': 67, 'D': 68}
+a = {v: k for k, v in a.items()}
+print(a)
