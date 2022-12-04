@@ -1,0 +1,14 @@
+#question:2
+v=input("enter the string")
+s=v.split()
+rev=[]
+for i in s:
+ rev.append( i[::-1])
+a=" ".join(rev)
+newSentence = ''
+for j in range(len(v)):
+  if v[j].isupper():
+    newSentence += a[j].upper()
+  else:
+    newSentence += a[j].lower()
+print( newSentence)
